@@ -152,7 +152,7 @@ def recognize_from_microphone():
     audio_config = speechsdk.audio.AudioConfig(use_default_microphone=True)
     speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config, audio_config=audio_config)
 
-    print("Speak into your microphone.")
+    print("Pode falar.")
     speech_recognition_result = speech_recognizer.recognize_once_async().get()
     textoFalado = speech_recognition_result.text if speech_recognition_result.reason == speechsdk.ResultReason.RecognizedSpeech else None
 
